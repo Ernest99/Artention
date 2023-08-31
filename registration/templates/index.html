@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+ {% include "head.html" %}
+ <style>
+    .logo_center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+ </style>
+<body>
+    
+    <div class="preloader">
+        <div class="art_gif">
+            <img src="{% static 'asset/ART.gif'%}" width="300px" alt="">
+        </div>
+    </div>
+    <!---
+    <nav>
+        <a href="">
+            <img src="{% static 'asset/artention_logo.png'%}" alt="">
+        </a>
+        <div class="navLinks">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Submit an Entry</a></li>
+                <li><a href="#">Get in touch</a></li>
+            </ul>
+        </div>
+    </nav> -->
+
+    <!-- <nav class="navbar">
+        <div class="nav-logo">
+            <a href="#"> <img src="{% static 'asset/artention_logo.png'%}" width="300px"alt="Logo"></a>
+        </div>
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#"><i class="bi bi-house-fill"></i></a></li>
+          <li class="nav-item"><a href="#">About Us</a></li>
+          <li class="nav-item"><a href="#">FAQ</a></li>
+          <li class="nav-item"><a href="#">Submit an Entry</a></li>
+          <li class="nav-item"><a href="#">Get in Touch</a></li>
+        </ul>
+      </nav>
+
+
+    <section id="about" class="about">
+        <div class="about_wrapper">
+            <div class="about_l">
+                <h1>Sustainability  <br>Through Art</h1>
+                <p>Artent!on 2023 Entry Opening</p>
+                <div class="cta">
+                    <div class="btn1">
+                        <button>Eligibilty</button>
+                    </div>
+                    <div class="btn2">
+                        <button id="btn">Submit Entry</button>
+                    </div>
+                </div>
+            </div>
+            <div class="about_r">
+                <img src="{% static 'asset/bg1.png'%}" width="450px" alt="">
+                <img class="leaf" src="{% static 'asset/leaf.png'%}" alt="">
+            </div>
+        </div>
+    </section> -->
+
+    <div class="wrapper content">
+        <div class="col-r">
+        </div>
+        <div class="col-l">
+            <div class="form_wrapper">
+                <div class="logo_center">
+                    <img class="logo" src="{% static '../static/asset/artention_fav.png'%}" width="35px" alt="">
+                </div>
+                <h2>Register Here</h2>
+                <h1>Upcycling Contest Participant Entry Form</h1>
+                {% include "./form.html" %}
+            </div>
+        </div> 
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'js/index.js'%}"></script>
+</body>
+</html>

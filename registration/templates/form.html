@@ -1,0 +1,73 @@
+{% load static %}
+
+<form  method="post" id="art_form" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="d-flex">
+        <div class="inputField">
+            <label for="">Name</label>
+            <div class="inputItem">
+                <input type="text" name="name" required>
+            </div>
+        </div>
+        <div class="inputField">
+            <label for="">Email</label>
+            <div class="inputItem">
+                <input type="email" name="email" required>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <div class="inputField">
+            <label for="">Phone</label>
+            <div class="inputItem">
+                <input type="text" name="phone" required>
+            </div>
+        </div>
+        <div class="inputField">
+            <label for="">Address</label>
+            <div class="inputItem">
+                <input type="text" name="address" required>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex">
+        <div class="inputField">
+            <label for="">Date of Birth</label>
+            <div class="inputItem">
+                <input type="date" name="dob" required>
+            </div>
+        </div>
+        <div class="inputField">
+            <label for="">Signature [Typed Name]</label>
+            <div class="inputItem">
+                <input type="text" name="signature" required>
+            </div>
+        </div>
+    </div>
+
+    <div class="inputField">
+        <label for="">What motivates you to join this upcycling contest? Kindly share your inspiration and objectives for participating.</label>
+        <div class="inputItem">
+            <textarea name="inspiration" id="" cols="20" rows="8" required></textarea>
+        </div>
+    </div>
+    <div class="inputField">
+        <label for="file_input">Upload Art Works[Zip File]</label>
+        <div class="inputItem">
+            <input type="file" id="file_input" name="art_works" required>
+        </div>
+    </div>
+    <div class="checkField">
+        <div class="checkItem">
+            <input type="checkbox" name="checked" required>
+            <p>I agree to the <a href="{% static 'asset/ARTENT!ON_Rules and Guidlines.pdf'%}" target="_blank">Terms & Conditions</a></p>
+        </div>
+    </div>
+    <div class="form_btn">
+        <input type="submit" id="btn" value="Register">
+    </div>
+    
+    {% for message in messages %}
+        <h3 class="message {{ message.tags }}" id="msg_fade" style="display: block;">{{ message }}</h3>
+    {% endfor %}
+</form>
